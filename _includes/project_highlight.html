@@ -1,0 +1,14 @@
+      {% for project in site.highlighted_projects %}
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="{{ project.image }}" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4> {{ project.title }}</h4>
+            <p class="text-black-50 mb-0">{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
