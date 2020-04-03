@@ -1,0 +1,68 @@
+# Site settings
+title: incon.ai
+email: hello@incon.ai
+url: https://incon.ai
+description: "We provide tools to build new structures with the help of augmented reality."
+header_description: Giving humans robotic vision.</br>Build the impossible.
+header_title: instructive construction
+author: incon.ai
+address: "Leonhardstrasse 21<br>8092 Zürich, Switzerland"
+number: +41 (0)44 632 27 40
+# baseurl: incon.ai
+
+# TODO(ff): Color settings not yet used.
+color:
+  primary-dark: '#161616'
+  links: '#219ab3'
+  button-default: '#64a19d'
+  button-hover: '#4f837f'
+  link-hover: '#3c6360'
+  link-active: '#467370'
+
+
+# links in nav bar
+navbar_links:
+  - about:
+    text: Overview
+    url: overview
+  - projects:
+    text: Projects
+    url: projects
+  - contact:
+    text: Contact
+    url: signup
+
+# Projects
+collections:
+  projects:
+    order: # Only supported from jekyll version 4 on, which is not yet available on github pages. (for now I just reversed the order in projects.html)
+      - augmented_acoustics.md
+      - advanced_aesthetics.md
+  highlighted_projects:
+    order:
+      - beautiful_and_functional.md
+
+# Footer settings
+footer: incon.ai
+
+# Social networks
+# TODO(ff): Activate once we have something to show there
+# social:
+#   - title: twitter
+#     url: https://twitter.com/inconai
+#   - title: facebook-f
+#     url: https://fb.me/inconai
+#   - title: instagram
+#     url: https://www.instagram.com/incon_ai/
+  # - title: github
+  #   url: https://github.com/inconai
+#
+sass:
+    style: compressed
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+    - jekyll-minifier
+    # - jekyll-coffeescript

@@ -1,3 +1,6 @@
+---
+# Ensuring that Jeykyll converts this file.
+---
 @import 'variables.scss';
 @import 'mixins.scss';
 @import 'navbar.scss';
@@ -32,6 +35,10 @@ a {
 
 .text-primary {
   color: $primary !important;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 footer {
