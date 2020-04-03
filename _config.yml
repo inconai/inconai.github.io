@@ -3,7 +3,7 @@ title: incon.ai
 email: hello@incon.ai
 url: https://incon.ai
 description: "We provide tools to build new structures with the help of augmented reality."
-header_description: Giving humans robot vision.</br>Build the impossible.
+header_description: Giving humans robotic vision.</br>Build the impossible.
 header_title: instructive construction
 author: incon.ai
 address: "Leonhardstrasse 21<br>8092 Zürich, Switzerland"
@@ -19,8 +19,18 @@ color:
   link-hover: '#3c6360'
   link-active: '#467370'
 
-# Project highlight
 
+# links in nav bar
+navbar_links:
+  - about:
+    text: Overview
+    url: overview
+  - projects:
+    text: Projects
+    url: projects
+  - contact:
+    text: Contact
+    url: signup
 
 # Projects
 collections:
