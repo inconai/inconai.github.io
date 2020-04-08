@@ -3,6 +3,10 @@
 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+    var hash = this.hash;
+    if (hash == "#page-top") {
+      hash = '';
+    }
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -10,6 +14,7 @@
         $('html, body').animate({
           scrollTop: (target.offset().top - 70)
         }, 1000, "easeInOutExpo");
+        location.hash = hash;
         return false;
       }
     }
