@@ -88,6 +88,13 @@
   color: rgba(255, 255, 255, 0.75) !important;
 }
 
+.text-justify {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .masthead {
   position: relative;
   width: 100%;

@@ -1,0 +1,56 @@
+      {% assign people_size = site.people | size %}
+      {% assign advisors_size = site.advisors | size %}
+      {% if people_size > 0 %}
+  <section id="team" class="projects-section bg-light">
+    <div class="container">
+      <div><h1>Team</h1></div>
+      {% endif %}
+      {% for person in site.people reversed %}
+      {% assign remainder = forloop.index | modulo: 2 %}
+      <div class="row justify-content-center no-gutters {% if remainder == 1 %} mb-5 mb-lg-0 {% endif %}">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{{ person.image }}" alt="{{ person.image_alt }}">
+        </div>
+        <div class="col-lg-6 {% if remainder == 1  %} {% else %} order-lg-first {% endif %}">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center {% if remainder == 1 %} text-lg-left {% else %} text-lg-right {% endif %}">
+                <h4 class="text-white">{{ person.title }}</h4>
+                <p class="mb-0 text-white-50 text-justify">{{ person.description }}</p>
+                <hr class="d-none d-lg-block mb-0 {% if remainder == 1 %} ml-0 {% else %} mr-0 {% endif %}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <section id="advisors" class="projects-section bg-light">
+    <div class="container">
+      {% if advisors_size > 0 %}
+    <!-- </div>
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0"> -->
+      <div><h1>Advisors</h1></div>
+      {% endif %}
+      {% for person in site.advisors %}
+      {% assign remainder = forloop.index | modulo: 2 %}
+      <div class="row justify-content-center no-gutters {% if remainder == 1 %} mb-5 mb-lg-0 {% endif %}">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{{ person.image }}" alt="{{ person.image_alt }}">
+        </div>
+        <div class="col-lg-6 {% if remainder == 1  %} {% else %} order-lg-first {% endif %}">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center {% if remainder == 1 %} text-lg-left {% else %} text-lg-right {% endif %}">
+                <h4 class="text-white">{{ person.title }}</h4>
+                <p class="mb-0 text-white-50 text-justify">{{ person.description }}</p>
+                <hr class="d-none d-lg-block mb-0 {% if remainder == 1 %} ml-0 {% else %} mr-0 {% endif %}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>

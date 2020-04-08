@@ -10,6 +10,12 @@ address: "Leonhardstrasse 21<br>8092 Zürich, Switzerland"
 number: +41 (0)44 632 27 40
 # baseurl: incon.ai
 
+# About page
+about_header_description: "We believe that new technology should not just drive improved productivity in building construction, but unlock our creativity to build better structures."
+about_header_title: "We are incon.ai"
+about_button_link: "#team"
+about_button_text: "Meet the team"
+
 # TODO(ff): Color settings not yet used.
 color:
   primary-dark: '#161616'
@@ -22,15 +28,18 @@ color:
 
 # links in nav bar
 navbar_links:
-  - about:
+  - overview:
     text: Overview
-    url: overview
+    url: '#overview'
   - projects:
     text: Projects
-    url: projects
+    url: '#projects'
   - contact:
     text: Contact
-    url: signup
+    url: '#signup'
+  - about:
+    text: About
+    url: '/about'
 
 # Projects
 collections:
@@ -41,6 +50,12 @@ collections:
   highlighted_projects:
     order:
       - beautiful_and_functional.md
+  people:
+    order:
+      -
+  advisors:
+    order:
+      -
 
 # Footer settings
 footer: incon.ai
