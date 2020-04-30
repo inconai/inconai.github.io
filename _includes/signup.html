@@ -6,13 +6,35 @@
 
           <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
           <h2 class="text-white mb-5">Subscribe to receive updates or send us direct enquiries for your building project!</h2>
-          <form id="contactform" class="form-inline d-flex" action="https://formsubmit.io/send/a9568f17-02cb-4406-a770-639838e67660" method="POST">
-            <input name="_redirect" type="hidden" id="name" value="http://incon.ai/index.html#signup">
-            <input type="email" name="_replyto" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="email" placeholder="Enter email address...">
-            <input name="_formsubmit_id" type="text" style="display:none">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-          </form>
-
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#subscribeModal">
+            Get Updates
+          </button>
+          <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-header">
+                <h5 class="modal-title" id="subscribeModalLabel">Get incon.ai updates</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-content">
+                <form id="contactform" class="form-inline d-flex" action="https://formsubmit.io/send/a9568f17-02cb-4406-a770-639838e67660" method="POST">
+                  <div class="modal-body">
+                    <input name="_redirect" type="hidden" id="name" value="http://incon.ai/index.html#signup">
+                    <input type="email" name="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="email" placeholder="Enter email address...">
+                    <input type="text" name="name" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="name" placeholder="Your name ...">
+                    <input type="text" name="industry" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="industry" placeholder="Your industry ...">
+                    <input type="text" name="application" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="application" placeholder="What application are you interested in ...">
+                    <input name="_formsubmit_id" type="text" style="display:none">
+                  </div>
+                  <input type="submit" class="invisible" id="subscribeButton"></button>
+                </form>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary mx-auto" id="triggerSubscribeButton" onclick="$('#subscribeButton').click()">Subscribe</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
