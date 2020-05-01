@@ -213,6 +213,10 @@
   }
 }
 
+.modal-dialog {
+  background: #fff;
+}
+
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-acoustic.png");
@@ -231,6 +235,14 @@
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   border: 0;
+}
+
+.signup-section .modal-body input{
+  text-transform: none;
+  background-color: #eff5f5;
+  letter-spacing: .1rem;
+  margin-top: 1em;
+  width: -webkit-fill-available;
 }
 
 .contact-section {
