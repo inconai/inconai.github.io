@@ -294,6 +294,14 @@ body {
   letter-spacing: 0.0625em;
 }
 
+.img-fluid.support-logo {
+  height: 7rem;
+  padding: 1rem 2rem;
+}
+.logos {
+  padding: 2rem 0rem;
+}
+
 a {
   color: #64a19d;
 }
@@ -316,5 +324,5 @@ a:focus, a:hover {
 }
 
 footer {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
