@@ -62,15 +62,18 @@ footer: incon.ai
 
 # Social networks
 # TODO(ff): Activate once we have something to show there
-# social:
-#   - title: twitter
-#     url: https://twitter.com/inconai
-#   - title: facebook-f
-#     url: https://fb.me/inconai
-#   - title: instagram
-#     url: https://www.instagram.com/incon_ai/
+social:
+  - title: linkedin
+    url: http://linkedin.com/company/incon-ai
+  - title: facebook-f
+    url: https://fb.me/inconai
+  - title: instagram
+    url: https://www.instagram.com/incon_ai/
+  # - title: twitter
+  #   url: https://twitter.com/inconai
   # - title: github
   #   url: https://github.com/inconai
+
 #
 sass:
     style: compressed
