@@ -5,9 +5,7 @@
     <div class="container">
       <div><h1>Team</h1></div>
       {% endif %}
-      {% assign n = site.people | size %}
-      {% assign people = site.people | sample: n %}
-      {% for person in people %}
+      {% for person in site.people %}
       {% assign remainder = forloop.index | modulo: 2 %}
       <div class="row justify-content-center no-gutters {% if remainder == 1 %} mb-5 mb-lg-0 {% endif %}">
         <div class="col-lg-6">
@@ -17,7 +15,7 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center {% if remainder == 1 %} text-lg-left {% else %} text-lg-right {% endif %}">
-                <h4 class="text-white">{{ person.title }}</h4>
+                <h4 class="text-white">{{ person.title }}{% if person.job_title != nil %}, {{person.job_title}}{% endif %}</h4>
                 <p class="mb-0 text-white-50 text-justify">{{ person.description }}</p>
                 <hr class="d-none d-lg-block mb-0 {% if remainder == 1 %} ml-0 {% else %} mr-0 {% endif %}">
               </div>

@@ -1,8 +1,12 @@
 name: Refresh
 
 on:
-  schedule:
-    - cron:  '0 0/4 * * *' # Runs every 4 hours
+  push:
+    branches:
+      - master
+# on:
+#   schedule:
+#     - cron:  '0 0/4 * * *' # Runs every 4 hours
 
 jobs:
   refresh:
